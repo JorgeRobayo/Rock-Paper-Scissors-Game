@@ -1,23 +1,56 @@
+body{
+    background-color: lightsalmon;
+}
+
 .gameTittle{
     display: flex;
     justify-content: center;
-    background-color: lavender;
+    /* background-color: lavender; */
+}
+
+.rounds{
+    text-align: center;
+    /* background-color: blue; */
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2=15px;
+}
+
+.optionBtns{
+    padding: 10px 25px 10px 25px;
+    margin: 15px;
+    background-color: rgb(228, 153, 54);
+    outline: solid black 2px;
 }
 
 .masterDiv{
-    height: 100vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(187, 187, 238);
+    /* background-color: rgb(187, 187, 238); */
 }
 
 .container{
     /* Maybe add a image instead of color */
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
+    /* background-image: url(images/containerBg.png); */
+    background: conic-gradient(red 0deg 180deg, orange 180deg 360deg);
     border-radius: 20px;
-    padding: 60px 120px;
+    padding: 80px 120px;
+    outline: solid black 2px;
     /* add a shadow box effect? */
+}
+
+.vsImg{
+    background-color: red;
+    padding: 25px;
+    border-radius: 100px;
+    text-align: center;
+    outline: solid black 2px;
 }
 
 .resultImg{
@@ -32,3 +65,42 @@
 .machineResult{
     transform: rotateY(180deg);
 }
+
+.resultTxt{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.logContainer{
+    display: flex;
+    justify-content: center;
+    margin: 20px 80px 20px 80px;
+}
+
+.logHist{
+    background-color: rgb(241, 83, 55);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 15px;
+    /* margin: 20px 80px 20px 80px; */
+    width: 600px;
+    justify-content: center;
+    outline: solid black 2px;
+}
+
+.restart{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.restartBtn{
+    background-color: rgb(228, 153, 54);
+    padding: 10px 25px 10px 25px;
+    outline: solid black 2px;
+}
+
