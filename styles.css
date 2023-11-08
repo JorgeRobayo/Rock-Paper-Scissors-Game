@@ -1,5 +1,10 @@
+*{
+    font-family: 'Browser';
+}
+
 body{
-    background-color: lightsalmon;
+    background-color: lightsalmon; 
+    /* background-image: url('https://as1.ftcdn.net/v2/jpg/01/15/57/50/1000_F_115575055_EOojIrsbMiT6jcaF4NnaS1jxD1YbDh9H.jpg'); */
 }
 
 .gameTittle{
@@ -22,7 +27,7 @@ body{
 .optionBtns{
     padding: 10px 25px 10px 25px;
     margin: 15px;
-    background-color: rgb(228, 153, 54);
+    background-color:rgb(255, 188, 64);
     outline: solid black 2px;
 }
 
@@ -38,16 +43,16 @@ body{
     /* Maybe add a image instead of color */
     /* background-color: aquamarine; */
     /* background-image: url(images/containerBg.png); */
-    background: conic-gradient(red 0deg 180deg, orange 180deg 360deg);
+    background: conic-gradient(rgb(241, 83, 55) 0deg 180deg, rgb(255, 188, 64) 180deg 360deg);
     border-radius: 20px;
-    padding: 80px 120px;
+    padding: 50px 120px;
     outline: solid black 2px;
     /* add a shadow box effect? */
 }
 
 .vsImg{
     background-color: red;
-    padding: 25px;
+    padding: 30px;
     border-radius: 100px;
     text-align: center;
     outline: solid black 2px;
@@ -99,7 +104,7 @@ body{
 }
 
 .restartBtn{
-    background-color: rgb(228, 153, 54);
+    background-color: rgb(255, 188, 64);
     padding: 10px 25px 10px 25px;
     outline: solid black 2px;
 }
