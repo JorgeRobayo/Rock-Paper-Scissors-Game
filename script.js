@@ -67,7 +67,7 @@ function changeResultImg(choice) {
     //the line below will change the machine result image but is not needed.
     // const machineImage = document.getElementById('machineImage')
 
-    userImage.src = `images/${choice}.png`
+    userResult.src = `images/${choice}.png`
 
     //the line below will change the machine result image but is not needed.
     // machineImage.src = `images/${choice}.png`
@@ -130,6 +130,7 @@ optionBtns.forEach((button, index) => {
         //     }
         // }
 
+        resultTxt.textContent = userVal === machineVal ? 'DRAW!' : `${finalResult} WON!`
 
     })
 })
