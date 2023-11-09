@@ -114,6 +114,9 @@ optionBtns.forEach((button, index) => {
             SR = "MACHINE WINS!",
             SP = "USER WINS!",
         ]
+
+        let finalResult = possibilities[userVal + machineVal]
+        console.log(finalResult)
     })
 })
 
