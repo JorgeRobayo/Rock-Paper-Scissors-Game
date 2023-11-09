@@ -31,6 +31,29 @@ body{
     outline: solid black 2px;
 }
 
+.options :hover{
+    padding: 10px 25px 10px 25px;
+    margin: 15px;
+    background-color:rgb(248, 199, 107);
+    outline: solid rgb(204, 21, 21) 2px;
+    cursor: pointer;
+}
+
+/* .optionBtns:hover#rock ~ .resultImg .userResult img,
+.optionBtns:hover#rock ~ .resultImg .machineResult img{
+    background-image: url('images/rock.png');
+}
+
+.optionBtns:hover#paper ~ .resultImg .userResult img,
+.optionBtns:hover#paper ~ .resultImg .machineResult img{
+    background-image: url('images/paper.png');
+}
+
+.optionBtns:hover#scissors ~ .resultImg .userResult img,
+.optionBtns:hover#scissors ~ .resultImg .machineResult img{
+    background-image: url('images/scissors.webp');
+} */
+
 .masterDiv{
     height: 50vh;
     display: flex;
@@ -107,5 +130,13 @@ body{
     background-color: rgb(255, 188, 64);
     padding: 10px 25px 10px 25px;
     outline: solid black 2px;
+}
+
+.restart :hover{
+    padding: 10px 25px 10px 25px;
+    /* margin: 15px; */
+    background-color:rgb(248, 199, 107);
+    outline: solid rgb(204, 21, 21) 2px;
+    cursor: pointer;
 }
 

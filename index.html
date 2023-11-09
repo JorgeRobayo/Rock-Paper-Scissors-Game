@@ -23,9 +23,9 @@
     </div>
 
     <div class="options">
-        <div class="optionBtns">Rock</div>
-        <div class="optionBtns">Paper</div>
-        <div class="optionBtns">Scissors</div>
+        <div class="optionBtns" id="rock" onmouseover="changeResultImg('rock')">Rock</div>
+        <div class="optionBtns" id="paper" onmouseover="changeResultImg('paper')">Paper</div>
+        <div class="optionBtns" id="scissors" onmouseover="changeResultImg('scissors')">Scissors</div>
     </div>
 
     <div class="masterDiv">
@@ -35,13 +35,14 @@
                 <div class="resultImg">
 
                     <span class="userResult">
-                        <img src="images/rock.png" alt="">
+                        <img src="images/rock.png" alt="" id="userImage">
+                        
                     </span>
 
                     <span class= "vsImg">VS</span>
 
                     <span class="machineResult">
-                        <img src="images/rock.png" alt="">
+                        <img src="images/rock.png" alt="" id="machineImage">
                     </span>
                 </div>
 
