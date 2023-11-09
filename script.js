@@ -91,7 +91,15 @@ optionBtns.forEach((button, index) => {
         //this is changing the src of the image based the outcome of the random math
         machineResult.src =  machineImg[randomNumber]
 
+        //this is setting a value to a random index
+        let machineVal = ["R", "P", "S"][randomNumber]
 
+        //this is setting a value to a set index
+        //this index comes from the function itself
+        //index would be the optnBtn that the user clicks on
+        let userVal = ["R", "P", "S"][index]
+
+        let possibilities = []
     })
 })
 
