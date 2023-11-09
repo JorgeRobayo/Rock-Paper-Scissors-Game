@@ -75,6 +75,7 @@ body{
 
 .vsImg{
     background-color: red;
+    height: 30%;
     padding: 30px;
     border-radius: 100px;
     text-align: center;
