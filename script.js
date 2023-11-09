@@ -122,7 +122,9 @@ optionBtns.forEach((button, index) => {
         let finalResult = possibilities = [userVal + machineVal]
         console.log(finalResult)
 
-        
+        resultTxt.textContent = `${finalResult}`
+
+
     })
 })
 
