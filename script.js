@@ -39,6 +39,8 @@
 
 //                             {{QUERIES}}
 
+//ADD ROUNDS
+
 //calling all the objects that might be needed in js for game
 const gameContainer = document.querySelector('.container'),
 
@@ -114,11 +116,13 @@ optionBtns.forEach((button, index) => {
             SR = "MACHINE WINS!",
             SP = "USER WINS!",
         ]
-
+        
+        //this will add both machinVal and userVal
+        //and it will console log a string based on the possibilities set previously
         let finalResult = possibilities = [userVal + machineVal]
         console.log(finalResult)
 
-
+        
     })
 })
 
