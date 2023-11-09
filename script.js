@@ -105,26 +105,29 @@ optionBtns.forEach((button, index) => {
         let userVal = ["R", "P", "S"][index]
 
         //these are all the possible options
-        let possibilities = [
-            RR = "DRAW",
-            RP = "MACHINE WINS!",
-            RS = "USER WINS",
-            PP = "DRAW",
-            PR = "MACHINE WINS!",
-            PS = "USER WINS!",
-            SS = "DRAW",
-            SR = "MACHINE WINS!",
-            SP = "USER WINS!",
-        ]
-        
+        let possibilities = {
+            RR: "DRAW",
+            RP: "MACHINE WINS!",
+            RS: "USER WINS",
+            PP: "DRAW",
+            PR: "MACHINE WINS!",
+            PS: "USER WINS!",
+            SS: "DRAW",
+            SR: "MACHINE WINS!",
+            SP: "USER WINS!",
+        }
         //this will add both machinVal and userVal
         //and it will console log a string based on the possibilities set previously
-        let finalResult = possibilities = [userVal + machineVal]
+        let finalResult = possibilities[userVal + machineVal]
         console.log(finalResult)
 
-        resultTxt.textContent = `${finalResult}`
+    // if(userVal === machineImg){
+    //     resultTxt.textContent = 'DRAW'
+    // }
+    // else{
 
-
+    // }
+        
     })
 })
 
