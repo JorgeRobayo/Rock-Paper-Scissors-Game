@@ -39,20 +39,6 @@ body{
     cursor: pointer;
 }
 
-/* .optionBtns:hover#rock ~ .resultImg .userResult img,
-.optionBtns:hover#rock ~ .resultImg .machineResult img{
-    background-image: url('images/rock.png');
-}
-
-.optionBtns:hover#paper ~ .resultImg .userResult img,
-.optionBtns:hover#paper ~ .resultImg .machineResult img{
-    background-image: url('images/paper.png');
-}
-
-.optionBtns:hover#scissors ~ .resultImg .userResult img,
-.optionBtns:hover#scissors ~ .resultImg .machineResult img{
-    background-image: url('images/scissors.webp');
-} */
 
 .masterDiv{
     height: 50vh;

@@ -1,15 +1,18 @@
 //                      {{GAME IDEAS}}
 
 //Buttons: the user will be able to hover over the button options
-//and see the shape displayed
+// and see the shape displayed
 
-//when the player is not hovering over any option the shape will go into a neutral shape(rock)
+//  when the player is not hovering over any option the shape will go into a neutral shape(rock)
 
 //once the player makes a choice the game will start.
 
 //ROUNDS: The best of 3 rounds wins the game
 
 //ANIMATIONS: while the game is starting there will be a  'shake' animation
+
+//  add a settimeoout to the log results
+//  add a settimeout to the user and cpu results.
 
 //RESTART: once the game is finished it will be restarted automatically
 //before the game restarts there will be a timer of 5seconds 
@@ -99,7 +102,18 @@ optionBtns.forEach((button, index) => {
         //index would be the optnBtn that the user clicks on
         let userVal = ["R", "P", "S"][index]
 
-        let possibilities = []
+        //these are all the possible options
+        let possibilities = [
+            PP = "DRAW",
+            PR = "MACHINE WINS!",
+            PS = "USER WINS!",
+            RR = "DRAW",
+            RP = "MACHINE WINS!",
+            RS = "USER WINS",
+            SS = "DRAW",
+            SR = "MACHINE WINS!",
+            SP = "USER WINS!",
+        ]
     })
 })
 
