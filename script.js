@@ -25,21 +25,48 @@
 
 //                          {{GAME LOGIC}}
 
+//call all query selectors first
 //
-
 
 
 //                             {{QUERIES}}
 
+//calling all the objects that might be needed in js for game
+const gameContainer = document.querySelector('.container'),
+
+//this is accessing the img tag inside the userResult class
+userResult = document.querySelector('.userResult img'),
+
+////this is accessing the img tag inside the macineResult class
+machineResult = document.querySelector('.machineResult img'),
+
+//this will access the result text in order to be able to change the text
+//and display the winner
+resultTxt = document.querySelector('resultTxt'),
+
+//this wil access all the button options R,P,S
+optionBtns = document.querySelectorAll('.optionBtns')
+
+
+//                             {{FUNCTIONS}}
+
+//THIS WILL CHANGE THE RESULT IMAGE WHEN THE USER HOVERS OVER THE OPTIONBTNS
 function changeResultImg(choice){
     const userImage = document.getElementById('userImage')
-    const machineImage = document.getElementById('machineImage')
+
+    //the line below will change the machine result image but is not needed.
+    // const machineImage = document.getElementById('machineImage')
 
     userImage.src = `images/${choice}.png`
-    machineImage.src = `images/${choice}.png`
 
-    console.log('works')
+    //the line below will change the machine result image but is not needed.
+    // machineImage.src = `images/${choice}.png`
+
+    //this console log will show that the functions is set properly
+    // console.log('works')
 }
+
+
 
 
 
