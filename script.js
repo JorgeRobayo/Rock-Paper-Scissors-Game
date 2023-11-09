@@ -52,7 +52,7 @@ const gameContainer = document.querySelector('.container'),
 
     //this will access the result text in order to be able to change the text
     //and display the winner
-    resultTxt = document.querySelector('resultTxt'),
+    resultTxt = document.querySelector('.resultTxt'),
 
     //this wil access all the button options R,P,S
     optionBtns = document.querySelectorAll('.optionBtns')
@@ -62,7 +62,7 @@ const gameContainer = document.querySelector('.container'),
 
 //THIS WILL CHANGE THE RESULT IMAGE WHEN THE USER HOVERS OVER THE OPTIONBTNS
 function changeResultImg(choice) {
-    const userImage = document.getElementById('userImage')
+    // const userImage = document.getElementById('userImage')
 
     //the line below will change the machine result image but is not needed.
     // const machineImage = document.getElementById('machineImage')
@@ -121,14 +121,14 @@ optionBtns.forEach((button, index) => {
         let finalResult = possibilities[userVal + machineVal]
         console.log(finalResult)
 
-        resultTxt.textContent = () =>{
-            if (userVal === machineVal) {
-                resultTxt.textContent = 'DRAW'
-            }
-            else {
-                resultTxt.textContent = `${finalResult} WON!`
-            }
-        }
+        // resultTxt.textContent = () => {
+        //     if (userVal === machineVal) {
+        //         return 'DRAW'
+        //     }
+        //     else {
+        //         return`${finalResult} WON!`
+        //     }
+        // }
 
 
     })
