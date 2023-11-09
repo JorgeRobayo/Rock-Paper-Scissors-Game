@@ -104,12 +104,12 @@ optionBtns.forEach((button, index) => {
 
         //these are all the possible options
         let possibilities = [
-            PP = "DRAW",
-            PR = "MACHINE WINS!",
-            PS = "USER WINS!",
             RR = "DRAW",
             RP = "MACHINE WINS!",
             RS = "USER WINS",
+            PP = "DRAW",
+            PR = "MACHINE WINS!",
+            PS = "USER WINS!",
             SS = "DRAW",
             SR = "MACHINE WINS!",
             SP = "USER WINS!",
@@ -117,7 +117,7 @@ optionBtns.forEach((button, index) => {
 
         let finalResult = possibilities = [userVal + machineVal]
         console.log(finalResult)
-        
+
 
     })
 })
