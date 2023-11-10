@@ -41,11 +41,22 @@ body{
 
 
 .masterDiv{
-    height: 50vh;
+    height: 35vh;
     display: flex;
     align-items: center;
     justify-content: center;
     /* background-color: rgb(187, 187, 238); */
+}
+
+.playerNames{
+    display: flex;
+    align-self: start;
+    justify-content: space-between;
+}
+
+#userName, #machineName{
+    margin: 15px;
+    
 }
 
 .container{
@@ -54,7 +65,7 @@ body{
     /* background-image: url(images/containerBg.png); */
     background: conic-gradient(rgb(241, 83, 55) 0deg 180deg, rgb(255, 188, 64) 180deg 360deg);
     border-radius: 20px;
-    padding: 50px 120px;
+    padding: 30px 50px;
     outline: solid black 2px;
     /* add a shadow box effect? */
 }
@@ -84,7 +95,7 @@ body{
 .resultTxt{
     text-align: center;
     font-size: 25px;
-    margin-top: 50px;
+    margin-top: 15px;
 }
 
 .logContainer{

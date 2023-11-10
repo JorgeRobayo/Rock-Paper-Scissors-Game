@@ -55,7 +55,13 @@ const gameContainer = document.querySelector('.container'),
     resultTxt = document.querySelector('.resultTxt'),
 
     //this wil access all the button options R,P,S
-    optionBtns = document.querySelectorAll('.optionBtns')
+    optionBtns = document.querySelectorAll('.optionBtns'),
+
+    //this will access the restart button to add functionality
+    restartBtn = document.querySelector('.restart'),
+
+    //this will access the rounds txt
+    rounds = document.querySelector('.rounds')
 
 
 //                             {{FUNCTIONS}}
@@ -107,19 +113,20 @@ optionBtns.forEach((button, index) => {
         //these are all the possible options
         let possibilities = {
             RR: "DRAW",
-            RP: "MACHINE WINS!",
-            RS: "USER WINS",
+            RP: "MACHINE",
+            RS: "USER",
             PP: "DRAW",
-            PR: "MACHINE WINS!",
-            PS: "USER WINS!",
+            PR: "USER",
+            PS: "MACHINE",
             SS: "DRAW",
-            SR: "MACHINE WINS!",
-            SP: "USER WINS!",
+            SR: "MACHINE",
+            SP: "USER",
         }
         //this will add both machinVal and userVal
         //and it will console log a string based on the possibilities set previously
         let finalResult = possibilities[userVal + machineVal]
         console.log(finalResult)
+
 
         // resultTxt.textContent = () => {
         //     if (userVal === machineVal) {
@@ -130,12 +137,17 @@ optionBtns.forEach((button, index) => {
         //     }
         // }
 
+        //this line will change the text content to display the winner
         resultTxt.textContent = userVal === machineVal ? 'DRAW!' : `${finalResult} WON!`
+
+
 
     })
 })
 
-
-
+//this function will reload the page once the restart button is clicked
+function reload(){
+    location.reload()
+}
 
 
