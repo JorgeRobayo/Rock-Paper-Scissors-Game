@@ -92,7 +92,7 @@ class Player {
 
 //Here I have instanciated a User and a Machine class
 const user = new Player ('User')
-const machine = new Player ('Mchine')
+const machine = new Player ('Machine')
 
 
 
@@ -184,7 +184,7 @@ optionBtns.forEach((button, index) => {
             resultTxt.textContent = 'DRAW!'
         }
 
-        else if (user === 'R'){
+        else if (userVal === 'R'){
             resultTxt.textContent = `${finalResult} WON!`
             user.roundWon()
         }
@@ -196,8 +196,11 @@ optionBtns.forEach((button, index) => {
 
         user.makeChoice(userVal)
 
-        if (user.winningRounds === 2 || machine.winningRounds === 2){
-            console.log(`${finalResult} Won all rounds`)
+        if (user.winningRounds === 2){
+            console.log(`${user} Won all rounds`)
+        }
+        else if (machine.winningRounds === 2){
+            console.log(`${machine} Won all rounds`)
         }
 
     })
