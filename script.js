@@ -197,10 +197,10 @@ optionBtns.forEach((button, index) => {
         user.makeChoice(userVal)
 
         if (user.winningRounds === 2){
-            console.log(`${user} Won all rounds`)
+            console.log(`${machine.name} Won all rounds`)
         }
         else if (machine.winningRounds === 2){
-            console.log(`${machine} Won all rounds`)
+            console.log(`${user.name} Won all rounds`)
         }
 
     })
