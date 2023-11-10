@@ -54,7 +54,7 @@ const gameContainer = document.querySelector('.container'),
     //and display the winner
     resultTxt = document.querySelector('.resultTxt'),
 
-    //this wil access all the button options R,P,S
+    //this will access all the button options R,P,S
     optionBtns = document.querySelectorAll('.optionBtns'),
 
     //this will access the restart button to add functionality
@@ -65,6 +65,30 @@ const gameContainer = document.querySelector('.container'),
 
 //                              {{CLASSES}}
 
+//Here I am definign a class of player
+//later on I can instanciate the User and the Machine
+class Player {
+    constructor(name){
+        
+        //this will set the name based on the name property when the class is instaniciated 
+        this.name = name
+        
+        //this will be the neutral resulimg for user
+        this.choice = 'rock'
+        
+        //this are the are the amount of rounds won for eath class
+        //later on there will be code to add 1 once the player wins a round
+        this.winningRounds = 0
+    }
+
+    makeChoice(choice){
+        this.choice = choice
+    }
+
+    roundWon(){
+        this.winningRounds++
+    }
+}
 
 
 
