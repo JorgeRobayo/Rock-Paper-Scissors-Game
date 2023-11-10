@@ -166,7 +166,7 @@ optionBtns.forEach((button, index) => {
         let finalResult = possibilities[userVal + machineVal]
         console.log(finalResult)
 
-
+//======================[[CODE NOT WORKING]]=================================
         // resultTxt.textContent = () => {
         //     if (userVal === machineVal) {
         //         return 'DRAW'
@@ -175,12 +175,30 @@ optionBtns.forEach((button, index) => {
         //         return`${finalResult} WON!`
         //     }
         // }
+//=============================================================================
 
         //this line will change the text content to display the winner
         resultTxt.textContent = userVal === machineVal ? 'DRAW!' : `${finalResult} WON!`
 
-        let roundsTxt = ['Round 1', 'Round 2', 'Round 3']
+        if (userVal === machineVal){
+            resultTxt.textContent = 'DRAW!'
+        }
 
+        else if (user === 'R'){
+            resultTxt.textContent = `${finalResult} WON!`
+            user.roundWon()
+        }
+
+        else {
+            resultTxt.textContent = `${finalResult} WON!`
+            machine.roundWon()
+        }
+
+        user.makeChoice(userVal)
+
+        if (user.winningRounds === 2 || machine.winningRounds === 2){
+            console.log(`${finalResult} Won all rounds`)
+        }
 
     })
 })
