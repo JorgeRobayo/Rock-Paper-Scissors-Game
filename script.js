@@ -90,6 +90,10 @@ class Player {
     }
 }
 
+//Here I have instanciated a User and a Machine class
+const user = new Player ('User')
+const machine = new Player ('Mchine')
+
 
 
 //                             {{FUNCTIONS}}
