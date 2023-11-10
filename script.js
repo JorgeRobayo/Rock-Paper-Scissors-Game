@@ -63,6 +63,10 @@ const gameContainer = document.querySelector('.container'),
     //this will access the rounds txt
     rounds = document.querySelector('.rounds')
 
+//                              {{CLASSES}}
+
+
+
 
 //                             {{FUNCTIONS}}
 
@@ -81,6 +85,13 @@ function changeResultImg(choice) {
     //this console log will show that the function is set properly
     // console.log('works')
 }
+
+//THIS WILL SET THE USER RESULT IMG TO ROCK WHEN USER IS NO HOVERING OVER THE BUTTONS
+optionBtns.forEach((button) => {
+    button.addEventListener('mouseleave', ()=>{
+        user.makeChoice('rock')
+    })
+})
 
 
 //This function will loop over each button 
@@ -140,6 +151,7 @@ optionBtns.forEach((button, index) => {
         //this line will change the text content to display the winner
         resultTxt.textContent = userVal === machineVal ? 'DRAW!' : `${finalResult} WON!`
 
+        let roundsTxt = ['Round 1', 'Round 2', 'Round 3']
 
 
     })
