@@ -116,10 +116,20 @@ function changeResultImg(choice) {
 
 //THIS WILL SET THE USER RESULT IMG TO ROCK WHEN USER IS NO HOVERING OVER THE BUTTONS
 optionBtns.forEach((button) => {
-    button.addEventListener('mouseleave', ()=>{
+    button.addEventListener('mouseout', ()=>{
         user.makeChoice('rock')
+        changeResultImg('rock')
     })
 })
+
+//++++++++++++++{EXAMPLE}+++++++++++
+// function screenBattle(newtext) { 
+//     const text = document.createElement('p')
+//     text.textContent = newtext
+//     // batleScreen.textContent = newtext
+//     batleScreen.appendChild (text)
+    
+// }
 
 
 //This function will loop over each button 
@@ -164,7 +174,7 @@ optionBtns.forEach((button, index) => {
         //this will add both machinVal and userVal
         //and it will console log a string based on the possibilities set previously
         let finalResult = possibilities[userVal + machineVal]
-        console.log(finalResult)
+        // console.log(finalResult)
 
 //======================[[CODE NOT WORKING]]=================================
         // resultTxt.textContent = () => {
@@ -197,11 +207,12 @@ optionBtns.forEach((button, index) => {
         user.makeChoice(userVal)
 
         if (user.winningRounds === 2){
-            console.log(`${machine.name} Won all rounds`)
-        }
-        else if (machine.winningRounds === 2){
             console.log(`${user.name} Won all rounds`)
         }
+        else if (machine.winningRounds === 2){
+            console.log(`${machine.name} Won all rounds`)
+        }
+        
 
     })
 })
