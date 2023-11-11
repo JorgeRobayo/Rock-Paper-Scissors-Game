@@ -64,7 +64,10 @@ const gameContainer = document.querySelector('.container'),
     rounds = document.querySelector('.rounds'),
 
     //this will call the log info class in order to append text
-    logInfo = document.querySelector('.logInfo')
+    logInfo = document.querySelector('.logInfo'),
+
+    //this will access the rounds txt to update while the game is happening
+    roundsTxt = document.querySelector('#roundsTxt')
 
 //                              {{CLASSES}}
 
@@ -134,6 +137,15 @@ function logHistTxt(logText){
     const newLog = document.createElement('p')
     newLog.textContent = logText
     logInfo.appendChild (newLog)
+}
+
+
+function updateRound (newRoundTxt){
+    const addRound = document.createElement('h2')
+    addRound.textContent = newRoundTxt
+    roundsTxt.textContent = ''
+    roundsTxt.textContent (addRound)
+
 }
 
 
@@ -212,6 +224,8 @@ optionBtns.forEach((button, index) => {
         }
 
         currentRound++
+
+        updateRound(currentRound)
 
         user.makeChoice(userVal)
 
