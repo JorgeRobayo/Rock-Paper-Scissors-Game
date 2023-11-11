@@ -14,8 +14,18 @@ body{
 }
 
 .rounds{
+    display: flex;
     text-align: center;
+    justify-content: center;
     /* background-color: blue; */
+}
+
+#roundsTxtLetters{
+    margin-right: 5px;
+}
+
+#roundsTxt{
+    margin-left: 5px;
 }
 
 .options{

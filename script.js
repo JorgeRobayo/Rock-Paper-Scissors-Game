@@ -139,13 +139,19 @@ function logHistTxt(logText){
     logInfo.appendChild (newLog)
 }
 
+//this function will display the round as a H2
 
-function updateRound (newRoundTxt){
-    const addRound = document.createElement('h2')
-    addRound.textContent = newRoundTxt
-    roundsTxt.textContent = ''
-    roundsTxt.textContent (addRound)
+//{{NOT WORKING, DISPLAYS EMPTY STRING}}
+// function updateRound (newRoundTxt){
+//     const addRound = document.createElement('h2')
+//     addRound.textContent = newRoundTxt
+//     roundsTxt.textContent = ''
+//     roundsTxt.textContent (addRound)
 
+// }
+
+function updateRound(newRoundTxt){
+    roundsTxt.textContent = newRoundTxt
 }
 
 
