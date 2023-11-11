@@ -196,7 +196,7 @@ optionBtns.forEach((button, index) => {
         resultTxt.textContent = userVal === machineVal ? 'DRAW!' : `${finalResult} WON!`
 
         if (userVal === machineVal){
-            logHistTxt(`DRAW!`)
+            logHistTxt(`ROUND ${currentRound} IS A DRAW!`)
         }
 
         else if (userVal === 'R'){
@@ -217,10 +217,14 @@ optionBtns.forEach((button, index) => {
 
         if (user.winningRounds === 2){
             logHistTxt(`${user.name} Won all rounds`)
+            location.reload() //need to add a set time out
+            
             // console.log(`${user.name} Won all rounds`)
         }
         else if (machine.winningRounds === 2){
-            logHistTxt(`${user.name} Won all rounds`)
+            logHistTxt(`${machine.name} Won all rounds`)
+            location.reload()//need to add a set time out
+            
             // console.log(`${machine.name} Won all rounds`)
         }
         
