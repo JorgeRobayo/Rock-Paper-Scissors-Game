@@ -31,12 +31,6 @@
 //PLAYER2: add a second user player in the future.
 
 
-//                          {{GAME LOGIC OVERVIEW}}
-
-//call all query selectors first
-//
-
-
 //                             {{QUERIES}}
 
 //ADD ROUNDS
@@ -83,7 +77,7 @@ class Player {
         this.choice = 'rock'
         
         //this are the are the amount of rounds won for eath class
-        //later on there will be code to add 1 once the player wins a round
+        //later on there will be code to add 1 once the any player wins a round
         this.winningRounds = 0
     }
 
@@ -130,7 +124,7 @@ optionBtns.forEach((button) => {
 
 //here I am creating a new round counter outside the classes
 //so it can be used in the functions
-let currentRound = 1
+let currentRound = 0
 
 //this function will display the result in the log Hist
 function logHistTxt(logText){
@@ -158,7 +152,7 @@ function updateRound(newRoundTxt){
 //This function will loop over each button 
 optionBtns.forEach((button, index) => {
 
-    //this is adding an event listener which is adding functionality to each optionBtn
+    //this is adding an event listener which is adding functionality to each optionBtn when clicked
     button.addEventListener("click", (e) => {
 
         //this will choose a random number between 0 and 2 (3 indexes in total)
@@ -182,7 +176,7 @@ optionBtns.forEach((button, index) => {
         //index would be the optnBtn that the user clicks on
         let userVal = ["R", "P", "S"][index]
 
-        //these are all the possible options
+        // this object stores all the possible options
         let possibilities = {
             RR: "DRAW",
             RP: "MACHINE",
@@ -213,6 +207,7 @@ optionBtns.forEach((button, index) => {
         //this line will change the text content to display the winner
         resultTxt.textContent = userVal === machineVal ? 'DRAW!' : `${finalResult} WON!`
 
+        
         if (userVal === machineVal){
 
             setTimeout(() => {
@@ -228,6 +223,8 @@ optionBtns.forEach((button, index) => {
             }, 500)
              
             user.roundWon()
+            
+            //this line checks if function works
             // console.log(user)
         }
 
@@ -238,24 +235,30 @@ optionBtns.forEach((button, index) => {
             }, 500)
             
             machine.roundWon()
+            
+            //this line checks if function works
             // console.log(machine)
         }
 
+        //This line adds 1 to the round count
         currentRound++
 
+        //this line updates the the h2 in the screen 
         updateRound(currentRound)
 
+        //this line gives the next turn to the user
         user.makeChoice(userVal)
 
+        //This will check the different outcomes and will display winner
         if (user.winningRounds === 2){
 
             setTimeout(() => {
-                logHistTxt(`${user.name} Won all rounds`)
+                logHistTxt(`${user.name} Won all rounds Game will restart in 5 seconds.`)
             }, 500)
             
             
             setTimeout(() => {
-                location.reload()
+                // location.reload()
             }, 5000) //5000 milliseconds = 5 seconds
              
             
@@ -264,12 +267,12 @@ optionBtns.forEach((button, index) => {
         else if (machine.winningRounds === 2){
 
             setTimeout(() => {
-                logHistTxt(`${machine.name} Won all rounds`)
+                logHistTxt(`${machine.name} Won all rounds. Game will restart in 5 seconds.`)
             }, 500)
             
             
             setTimeout(() => {
-                location.reload()
+                // location.reload()
             }, 5000) //5000 milliseconds = 5 seconds
             
             // console.log(`${machine.name} Won all rounds`)
