@@ -149,6 +149,15 @@ function updateRound(newRoundTxt){
 }
 
 
+
+//Here I am creating a new function that will toggle between two different classes
+//in order to add a new enviroment. 
+    //NEED TO CREATE A NEW BUTTON CALLED WINTER IN HTML AND CUSTOMIZE IT IN CCSS
+    //THEN I NEED TO REMOVE THE CLASS OF THE CURRENT DIV AND REPLACE IT WITH THE NEW ONE
+
+// rounds.toggleAttribute(.winter)
+
+
 //This function will loop over each button 
 optionBtns.forEach((button, index) => {
 
