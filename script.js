@@ -61,7 +61,10 @@ const gameContainer = document.querySelector('.container'),
     restartBtn = document.querySelector('.restart'),
 
     //this will access the rounds txt
-    rounds = document.querySelector('.rounds')
+    rounds = document.querySelector('.rounds'),
+
+    //this will call the log info class in order to append text
+    logInfo = document.querySelector('.logInfo')
 
 //                              {{CLASSES}}
 
@@ -122,14 +125,12 @@ optionBtns.forEach((button) => {
     })
 })
 
-//++++++++++++++{EXAMPLE}+++++++++++
-// function screenBattle(newtext) { 
-//     const text = document.createElement('p')
-//     text.textContent = newtext
-//     // batleScreen.textContent = newtext
-//     batleScreen.appendChild (text)
-    
-// }
+
+function logHistTxt(logText){
+    const newLog = document.createElement('p')
+    newLog.textContent = logText
+    logInfo.appendChild (newLog)
+}
 
 
 //This function will loop over each button 
@@ -197,11 +198,13 @@ optionBtns.forEach((button, index) => {
         else if (userVal === 'R'){
             resultTxt.textContent = `${finalResult} WON!`
             user.roundWon()
+            console.log(user)
         }
 
         else {
             resultTxt.textContent = `${finalResult} WON!`
             machine.roundWon()
+            console.log(machine)
         }
 
         user.makeChoice(userVal)
@@ -213,7 +216,7 @@ optionBtns.forEach((button, index) => {
             console.log(`${machine.name} Won all rounds`)
         }
         
-
+        logHistTxt(finalResult)
     })
 })
 

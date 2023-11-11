@@ -27,6 +27,7 @@ body{
 .optionBtns{
     padding: 10px 25px 10px 25px;
     margin: 15px;
+    margin-bottom: 30px;
     background-color:rgb(255, 188, 64);
     outline: solid black 2px;
 }
@@ -101,7 +102,7 @@ body{
 .logContainer{
     display: flex;
     justify-content: center;
-    margin: 20px 80px 20px 80px;
+    margin: 30px 80px 20px 80px;
 }
 
 .logHist{
