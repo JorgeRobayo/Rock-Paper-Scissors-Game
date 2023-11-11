@@ -2,8 +2,11 @@
     font-family: 'Browser';
 }
 
-
 /* new environment */
+
+body.winterEnv{
+    background-color: aqua;
+}
 
 
 body{

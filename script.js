@@ -157,6 +157,16 @@ function updateRound(newRoundTxt){
 
 // rounds.toggleAttribute(.winter)
 
+function swithEnv() {
+    document.body.classList.remove("winterEnv")
+    // gameContainer.classList.remove('winterEnv')
+
+    if (theme === 'winter'){
+        document.body.classList.add("winterEnv")
+        // gameContainer.classList.add("winterEnv")
+    }
+}
+
 
 //This function will loop over each button 
 optionBtns.forEach((button, index) => {
