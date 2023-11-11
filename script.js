@@ -125,7 +125,11 @@ optionBtns.forEach((button) => {
     })
 })
 
+//here I am creating a new round counter outside the classes
+//so it can be used in the functions
+let currentRound = 1
 
+//this function will display the result in the log Hist
 function logHistTxt(logText){
     const newLog = document.createElement('p')
     newLog.textContent = logText
@@ -192,31 +196,34 @@ optionBtns.forEach((button, index) => {
         resultTxt.textContent = userVal === machineVal ? 'DRAW!' : `${finalResult} WON!`
 
         if (userVal === machineVal){
-            resultTxt.textContent = 'DRAW!'
+            logHistTxt(`DRAW!`)
         }
 
         else if (userVal === 'R'){
-            resultTxt.textContent = `${finalResult} WON!`
+            logHistTxt(`${finalResult} WON ROUND ${currentRound}`) 
             user.roundWon()
-            console.log(user)
+            // console.log(user)
         }
 
         else {
-            resultTxt.textContent = `${finalResult} WON!`
+            logHistTxt(`${finalResult} WON ROUND ${currentRound}`) 
             machine.roundWon()
-            console.log(machine)
+            // console.log(machine)
         }
+
+        currentRound++
 
         user.makeChoice(userVal)
 
         if (user.winningRounds === 2){
-            console.log(`${user.name} Won all rounds`)
+            logHistTxt(`${user.name} Won all rounds`)
+            // console.log(`${user.name} Won all rounds`)
         }
         else if (machine.winningRounds === 2){
-            console.log(`${machine.name} Won all rounds`)
+            logHistTxt(`${user.name} Won all rounds`)
+            // console.log(`${machine.name} Won all rounds`)
         }
         
-        logHistTxt(finalResult)
     })
 })
 
