@@ -214,17 +214,29 @@ optionBtns.forEach((button, index) => {
         resultTxt.textContent = userVal === machineVal ? 'DRAW!' : `${finalResult} WON!`
 
         if (userVal === machineVal){
-            logHistTxt(`ROUND ${currentRound} IS A DRAW!`)
+
+            setTimeout(() => {
+                logHistTxt(`ROUND ${currentRound} IS A DRAW!`)
+            }, 500)
+            
         }
 
         else if (userVal === 'R'){
-            logHistTxt(`${finalResult} WON ROUND ${currentRound}`) 
+
+            setTimeout(() => {
+                logHistTxt(`${finalResult} WON ROUND ${currentRound}`)
+            }, 500)
+             
             user.roundWon()
             // console.log(user)
         }
 
         else {
-            logHistTxt(`${finalResult} WON ROUND ${currentRound}`) 
+
+            setTimeout(() => {
+                logHistTxt(`${finalResult} WON ROUND ${currentRound}`) 
+            }, 500)
+            
             machine.roundWon()
             // console.log(machine)
         }
@@ -236,14 +248,29 @@ optionBtns.forEach((button, index) => {
         user.makeChoice(userVal)
 
         if (user.winningRounds === 2){
-            logHistTxt(`${user.name} Won all rounds`)
-            location.reload() //need to add a set time out
+
+            setTimeout(() => {
+                logHistTxt(`${user.name} Won all rounds`)
+            }, 500)
+            
+            
+            setTimeout(() => {
+                location.reload()
+            }, 5000) //5000 milliseconds = 5 seconds
+             
             
             // console.log(`${user.name} Won all rounds`)
         }
         else if (machine.winningRounds === 2){
-            logHistTxt(`${machine.name} Won all rounds`)
-            location.reload()//need to add a set time out
+
+            setTimeout(() => {
+                logHistTxt(`${machine.name} Won all rounds`)
+            }, 500)
+            
+            
+            setTimeout(() => {
+                location.reload()
+            }, 5000) //5000 milliseconds = 5 seconds
             
             // console.log(`${machine.name} Won all rounds`)
         }
