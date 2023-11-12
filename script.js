@@ -163,7 +163,7 @@ function updateRound(newRoundTxt){
 // rounds.toggleAttribute(.winter)
 
 function swithEnv(environment) {
-    document.body.classList.remove("winterEnv")
+    document.body.classList.remove(environment)
 
     document.body.classList.add(`${environment}Env`)
      // gameContainer.classList.add("winterEnv")
