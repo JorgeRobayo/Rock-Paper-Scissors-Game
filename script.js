@@ -60,8 +60,13 @@ const gameContainer = document.querySelector('.container'),
     //this will call the log info class in order to append text
     logInfo = document.querySelector('.logInfo'),
 
+    logHist = document.querySelector('.logHist'),
+
     //this will access the rounds txt to update while the game is happening
-    roundsTxt = document.querySelector('#roundsTxt')
+    roundsTxt = document.querySelector('#roundsTxt'),
+
+    //this will add the vs div in order to stylize it
+    vsImg = document.querySelector('.vsImg')
 
 //                              {{CLASSES}}
 
@@ -157,14 +162,19 @@ function updateRound(newRoundTxt){
 
 // rounds.toggleAttribute(.winter)
 
-function swithEnv() {
+function swithEnv(environment) {
     document.body.classList.remove("winterEnv")
-    // gameContainer.classList.remove('winterEnv')
 
-    if (theme === 'winter'){
-        document.body.classList.add("winterEnv")
-        // gameContainer.classList.add("winterEnv")
-    }
+    document.body.classList.add(`${environment}Env`)
+     // gameContainer.classList.add("winterEnv")
+    
+     gameContainer.classList.add (`${environment}Env`)
+
+     vsImg.classList.add (`${environment}Env`)
+
+     logHist.classList.add (`${environment}Env`)
+
+    
 }
 
 
@@ -277,7 +287,7 @@ optionBtns.forEach((button, index) => {
             
             
             setTimeout(() => {
-                // location.reload()
+                location.reload()
             }, 5000) //5000 milliseconds = 5 seconds
              
             
@@ -291,7 +301,7 @@ optionBtns.forEach((button, index) => {
             
             
             setTimeout(() => {
-                // location.reload()
+                location.reload()
             }, 5000) //5000 milliseconds = 5 seconds
             
             // console.log(`${machine.name} Won all rounds`)
