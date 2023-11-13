@@ -17,6 +17,14 @@ body.winterEnv{
     outline: solid black 2px;
 }
 
+.optionBtns.winterEnv:hover{
+    padding: 10px 25px 10px 25px;
+    margin: 15px;
+    /* margin-bottom: 30px; */
+    background-color:rgb(237, 255, 251);
+    outline: solid black 2px;
+}
+
 .container.winterEnv{
     background: conic-gradient(rgb(72, 140, 219) 0deg 180deg, rgb(166, 244, 229) 180deg 360deg);
 }
@@ -46,6 +54,12 @@ body.winterEnv{
 
 .restartBtn.winterEnv{
     background-color: rgb(166, 244, 229);
+    padding: 10px 25px 10px 25px;
+    outline: solid black 2px;
+}
+
+.restartBtn.winterEnv:hover{
+    background-color: rgb(237, 255, 251);
     padding: 10px 25px 10px 25px;
     outline: solid black 2px;
 }
