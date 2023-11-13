@@ -44,6 +44,12 @@ body.winterEnv{
     
 }
 
+.restartBtn.winterEnv{
+    background-color: rgb(166, 244, 229);
+    padding: 10px 25px 10px 25px;
+    outline: solid black 2px;
+}
+
 /* SPACE */
 
 body.spaceEnv{

@@ -106,16 +106,6 @@ function logHistTxt(logText) {
 }
 
 //this function will display the round as a H2
-
-//{{NOT WORKING, DISPLAYS EMPTY STRING}}
-// function updateRound (newRoundTxt){
-//     const addRound = document.createElement('h2')
-//     addRound.textContent = newRoundTxt
-//     roundsTxt.textContent = ''
-//     roundsTxt.textContent (addRound)
-
-// }
-
 function updateRound(newRoundTxt) {
     roundsTxt.textContent = newRoundTxt
 }
@@ -127,27 +117,12 @@ function updateRound(newRoundTxt) {
 //NEED TO CREATE A NEW BUTTON CALLED WINTER IN HTML AND CUSTOMIZE IT IN CCSS
 //THEN I NEED TO REMOVE THE CLASS OF THE CURRENT DIV AND REPLACE IT WITH THE NEW ONE
 
-// rounds.toggleAttribute(.winter)
-
-// function swithEnv(environment) {
-//     if (environment === 'space'){
-    
-//     document.body.classList.remove("winterEnv")
-
-//     document.body.setAttribute('class', 'spaceEnv')
-        
-// }
-
-//     else if (environment === 'winter'){
-//         document.body.setAttribute('class', 'winterEnv')
-//     }
-// }
 
 function swithEnv(environment) {
     // this will remove all existing environment classes from the body
     document.body.classList.remove("winterEnv", "spaceEnv");
 
-    // Add the new environment class to body
+    // this will add new environment class to body
     document.body.classList.add(`${environment}Env`);
 
     // this removes and add classes as needed
@@ -164,6 +139,9 @@ function swithEnv(environment) {
         button.classList.remove("winterEnv", "spaceEnv");
         button.classList.add(`${environment}Env`);
     });
+
+    restartBtn.classList.remove("winterEnv", "spaceEnv");
+    restartBtn.classList.add(`${environment}Env`);
 }
 
 
