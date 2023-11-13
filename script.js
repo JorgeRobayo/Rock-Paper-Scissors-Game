@@ -130,27 +130,20 @@ function updateRound(newRoundTxt) {
 // rounds.toggleAttribute(.winter)
 
 function swithEnv(environment) {
-    if (environment === 'space'){
-    
-    document.body.classList.remove("winterEnv")
+    if (environment === 'space') {
 
-    document.body.setAttribute('class', 'spaceEnv')
-        
-    // document.body.classList.add(`${environment}Env`)
-    // // gameContainer.classList.add("winterEnv")
+        document.body.classList.remove("winterEnv")
 
-    // gameContainer.classList.add(`${environment}Env`)
+        document.body.setAttribute('class', 'spaceEnv')
 
-    // vsImg.classList.add(`${environment}Env`)
+    }
 
-    // logHist.classList.add(`${environment}Env`)
-}
+    else if (environment === 'winter') {
 
-    else if (environment === 'winter'){
         document.body.setAttribute('class', 'winterEnv')
     }
 
- 
+
 
 
 }
