@@ -73,31 +73,31 @@ const gameContainer = document.querySelector('.container'),
 //Here I am definign a class of player
 //later on I can instanciate the User and the Machine
 class Player {
-    constructor(name){
-        
+    constructor(name) {
+
         //this will set the name based on the name property when the class is instaniciated 
         this.name = name
-        
+
         //this will be the neutral resulimg for user
         this.choice = 'rock'
-        
+
         //this are the are the amount of rounds won for eath class
         //later on there will be code to add 1 once the any player wins a round
         this.winningRounds = 0
     }
 
-    makeChoice(choice){
+    makeChoice(choice) {
         this.choice = choice
     }
 
-    roundWon(){
-        // this.winningRounds++
+    roundWon() {
+        this.winningRounds++
     }
 }
 
 //Here I have instanciated a User and a Machine class
-const user = new Player ('User')
-const machine = new Player ('Machine')
+const user = new Player('User')
+const machine = new Player('Machine')
 
 
 
@@ -121,7 +121,7 @@ function changeResultImg(choice) {
 
 //THIS WILL SET THE USER RESULT IMG TO ROCK WHEN USER IS NO HOVERING OVER THE BUTTONS
 optionBtns.forEach((button) => {
-    button.addEventListener('mouseout', ()=>{
+    button.addEventListener('mouseout', () => {
         user.makeChoice('rock')
         changeResultImg('rock')
     })
@@ -132,10 +132,10 @@ optionBtns.forEach((button) => {
 let currentRound = 0
 
 //this function will display the result in the log Hist
-function logHistTxt(logText){
+function logHistTxt(logText) {
     const newLog = document.createElement('p')
     newLog.textContent = logText
-    logInfo.appendChild (newLog)
+    logInfo.appendChild(newLog)
 }
 
 //this function will display the round as a H2
@@ -149,7 +149,7 @@ function logHistTxt(logText){
 
 // }
 
-function updateRound(newRoundTxt){
+function updateRound(newRoundTxt) {
     roundsTxt.textContent = newRoundTxt
 }
 
@@ -157,24 +157,35 @@ function updateRound(newRoundTxt){
 
 //Here I am creating a new function that will toggle between two different classes
 //in order to add a new enviroment. 
-    //NEED TO CREATE A NEW BUTTON CALLED WINTER IN HTML AND CUSTOMIZE IT IN CCSS
-    //THEN I NEED TO REMOVE THE CLASS OF THE CURRENT DIV AND REPLACE IT WITH THE NEW ONE
+//NEED TO CREATE A NEW BUTTON CALLED WINTER IN HTML AND CUSTOMIZE IT IN CCSS
+//THEN I NEED TO REMOVE THE CLASS OF THE CURRENT DIV AND REPLACE IT WITH THE NEW ONE
 
 // rounds.toggleAttribute(.winter)
 
 function swithEnv(environment) {
+    if (environment === 'space'){
+    
     document.body.classList.remove("winterEnv")
 
-    document.body.classList.add(`${environment}Env`)
-     // gameContainer.classList.add("winterEnv")
-    
-     gameContainer.classList.add (`${environment}Env`)
+    document.body.setAttribute('class', 'spaceEnv')
+        
+    // document.body.classList.add(`${environment}Env`)
+    // // gameContainer.classList.add("winterEnv")
 
-     vsImg.classList.add (`${environment}Env`)
+    // gameContainer.classList.add(`${environment}Env`)
 
-     logHist.classList.add (`${environment}Env`)
+    // vsImg.classList.add(`${environment}Env`)
 
-    
+    // logHist.classList.add(`${environment}Env`)
+}
+
+    else if (environment === 'winter'){
+        document.body.setAttribute('class', 'winterEnv')
+    }
+
+ 
+
+
 }
 
 
@@ -218,11 +229,11 @@ optionBtns.forEach((button, index) => {
             SP: "USER",
         }
         //this will add both machinVal and userVal
-        //and it will console log a string based on the possibilities set previously
+        //and it will console log a string based on the possibilities set previously in the object above
         let finalResult = possibilities[userVal + machineVal]
         // console.log(finalResult)
 
-//======================[[CODE NOT WORKING]]=================================
+        //======================[[CODE NOT WORKING]]=================================
         // resultTxt.textContent = () => {
         //     if (userVal === machineVal) {
         //         return 'DRAW'
@@ -231,30 +242,30 @@ optionBtns.forEach((button, index) => {
         //         return`${finalResult} WON!`
         //     }
         // }
-//=============================================================================
+        //=============================================================================
 
         //this line will change the text content to display the winner
-        resultTxt.textContent = (userVal === machineVal )? 'DRAW!' : `${finalResult} WON!`
+        resultTxt.textContent = (userVal === machineVal) ? 'DRAW!' : `${finalResult} WON!`
 
-        
-        //there is a problem here might need to compare it to possibilities 
-        //not userval that might be the error
-        if (finalResult === possibilities.PP || finalResult === possibilities.RR || finalResult === possibilities.SS){
+
+        //this line is comparing the different outcomes and checking is it is a draw
+        //then it is printing appending a string to the log hist
+        if (finalResult === possibilities.PP || finalResult === possibilities.RR || finalResult === possibilities.SS) {
 
             setTimeout(() => {
                 logHistTxt(`ROUND ${currentRound} IS A DRAW!`)
             }, 500)
-            
+
         }
 
-        else if (finalResult === possibilities.RS || finalResult === possibilities.SP|| finalResult === possibilities.PR){
+        else if (finalResult === possibilities.RS || finalResult === possibilities.SP || finalResult === possibilities.PR) {
 
             setTimeout(() => {
                 logHistTxt(`${finalResult} WON ROUND ${currentRound}`)
             }, 500)
-             
+
             user.roundWon()
-            
+
             //this line checks if function works
             // console.log(user)
         }
@@ -262,11 +273,11 @@ optionBtns.forEach((button, index) => {
         else {
 
             setTimeout(() => {
-                logHistTxt(`${finalResult} WON ROUND ${currentRound}`) 
+                logHistTxt(`${finalResult} WON ROUND ${currentRound}`)
             }, 500)
-            
+
             machine.roundWon()
-            
+
             //this line checks if function works
             // console.log(machine)
         }
@@ -281,39 +292,39 @@ optionBtns.forEach((button, index) => {
         user.makeChoice(userVal)
 
         //This will check the different outcomes and will display winner
-        if (user.winningRounds === 2){
+        if (user.winningRounds === 2) {
 
             setTimeout(() => {
                 logHistTxt(`${finalResult} Won all rounds Game will restart in 5 seconds.`)
             }, 500)
-            
-            
+
+
             setTimeout(() => {
                 location.reload()
             }, 5000) //5000 milliseconds = 5 seconds
-             
-            
+
+
             // console.log(`${user.name} Won all rounds`)
         }
-        else if (machine.winningRounds === 2){
+        else if (machine.winningRounds === 2) {
 
             setTimeout(() => {
                 logHistTxt(`${finalResult} Won all rounds. Game will restart in 5 seconds.`)
             }, 500)
-            
-            
+
+
             setTimeout(() => {
                 location.reload()
             }, 5000) //5000 milliseconds = 5 seconds
-            
+
             // console.log(`${machine.name} Won all rounds`)
         }
-        
+
     })
 })
 
 //this function will reload the page once the restart button is clicked
-function reload(){
+function reload() {
     location.reload()
 }
 
