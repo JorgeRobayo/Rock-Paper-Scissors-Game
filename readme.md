@@ -32,5 +32,10 @@ PLAYER2: add a second user player in the future.
 
 ANIMATIONS: while the game is starting there will be a  'shake' animation
 
-                {{WIREFRAME}}
+                        {{WIREFRAME}}
+
 ![Getting started](images/wireframe.png)
+
+                        {{CODE}} 
+
+I have commented the code in a way that can be understand easily.
