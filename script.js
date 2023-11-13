@@ -129,23 +129,41 @@ function updateRound(newRoundTxt) {
 
 // rounds.toggleAttribute(.winter)
 
+// function swithEnv(environment) {
+//     if (environment === 'space'){
+    
+//     document.body.classList.remove("winterEnv")
+
+//     document.body.setAttribute('class', 'spaceEnv')
+        
+// }
+
+//     else if (environment === 'winter'){
+//         document.body.setAttribute('class', 'winterEnv')
+//     }
+// }
+
 function swithEnv(environment) {
-    if (environment === 'space') {
+    // this will remove all existing environment classes from the body
+    document.body.classList.remove("winterEnv", "spaceEnv");
 
-        document.body.classList.remove("winterEnv")
+    // Add the new environment class to body
+    document.body.classList.add(`${environment}Env`);
 
-        document.body.setAttribute('class', 'spaceEnv')
+    // this removes and add classes as needed
+    gameContainer.classList.remove("winterEnv", "spaceEnv");
+    gameContainer.classList.add(`${environment}Env`);
 
-    }
+    vsImg.classList.remove("winterEnv", "spaceEnv");
+    vsImg.classList.add(`${environment}Env`);
 
-    else if (environment === 'winter') {
-
-        document.body.setAttribute('class', 'winterEnv')
-    }
-
-
-
-
+    logHist.classList.remove("winterEnv", "spaceEnv");
+    logHist.classList.add(`${environment}Env`);
+    
+    optionBtns.forEach(button => {
+        button.classList.remove("winterEnv", "spaceEnv");
+        button.classList.add(`${environment}Env`);
+    });
 }
 
 
