@@ -19,7 +19,7 @@ const gameContainer = document.querySelector('.container'),
     optionBtns = document.querySelectorAll('.optionBtns'),
 
     //this will access the restart button to add functionality
-    restartBtn = document.querySelector('.restart'),
+    restartBtn = document.querySelector('.restartBtn'),
 
     //this will access the rounds txt
     rounds = document.querySelector('.rounds'),
