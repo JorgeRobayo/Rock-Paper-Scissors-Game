@@ -93,6 +93,24 @@ body.spaceEnv{
     outline: solid black 2px;
 }
 
+.optionBtns.spaceEnv:hover{
+    background-color: rgb(220, 191, 245);
+    padding: 10px 25px 10px 25px;
+    outline: solid black 2px;
+}
+
+.restartBtn.spaceEnv{
+    background-color: rgb(208, 166, 244);
+    padding: 10px 25px 10px 25px;
+    outline: solid black 2px;
+}
+
+.restartBtn.spaceEnv:hover{
+    background-color: rgb(220, 191, 245);
+    padding: 10px 25px 10px 25px;
+    outline: solid black 2px;
+}
+
 
 
 /* main environment */
