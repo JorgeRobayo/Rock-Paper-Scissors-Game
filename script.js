@@ -91,7 +91,7 @@ class Player {
     }
 
     roundWon(){
-        this.winningRounds++
+        // this.winningRounds++
     }
 }
 
@@ -163,7 +163,7 @@ function updateRound(newRoundTxt){
 // rounds.toggleAttribute(.winter)
 
 function swithEnv(environment) {
-    document.body.classList.remove(environment)
+    document.body.classList.remove("winterEnv")
 
     document.body.classList.add(`${environment}Env`)
      // gameContainer.classList.add("winterEnv")
@@ -234,10 +234,12 @@ optionBtns.forEach((button, index) => {
 //=============================================================================
 
         //this line will change the text content to display the winner
-        resultTxt.textContent = userVal === machineVal ? 'DRAW!' : `${finalResult} WON!`
+        resultTxt.textContent = (userVal === machineVal )? 'DRAW!' : `${finalResult} WON!`
 
         
-        if (userVal === machineVal){
+        //there is a problem here might need to compare it to possibilities 
+        //not userval that might be the error
+        if (finalResult === possibilities.PP || finalResult === possibilities.RR || finalResult === possibilities.SS){
 
             setTimeout(() => {
                 logHistTxt(`ROUND ${currentRound} IS A DRAW!`)
@@ -245,7 +247,7 @@ optionBtns.forEach((button, index) => {
             
         }
 
-        else if (userVal === 'R'){
+        else if (finalResult === possibilities.RS || finalResult === possibilities.SP|| finalResult === possibilities.PR){
 
             setTimeout(() => {
                 logHistTxt(`${finalResult} WON ROUND ${currentRound}`)
@@ -282,7 +284,7 @@ optionBtns.forEach((button, index) => {
         if (user.winningRounds === 2){
 
             setTimeout(() => {
-                logHistTxt(`${user.name} Won all rounds Game will restart in 5 seconds.`)
+                logHistTxt(`${finalResult} Won all rounds Game will restart in 5 seconds.`)
             }, 500)
             
             
@@ -296,7 +298,7 @@ optionBtns.forEach((button, index) => {
         else if (machine.winningRounds === 2){
 
             setTimeout(() => {
-                logHistTxt(`${machine.name} Won all rounds. Game will restart in 5 seconds.`)
+                logHistTxt(`${finalResult} Won all rounds. Game will restart in 5 seconds.`)
             }, 500)
             
             
