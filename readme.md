@@ -1,3 +1,7 @@
+Deployed link: https://rock-paper-scissors-cnk7.onrender.com/
+                    
+                    
+                    
                     {{ROCK PAPER SCISSORS GAME!!!!}}
  
                         {{GAME IDEAS}}
